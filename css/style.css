@@ -1061,17 +1061,21 @@ textarea.form-control {
 }
 
 /* Segmented Tab Controls */
-.tab-controls {
+.tab-controls,
+.segmented-control {
   display: inline-flex;
-  background: var(--bg-subtle);
+  background: var(--pss-slate-100);
   border: 1px solid var(--border-light);
   padding: 4px;
   border-radius: var(--radius-md);
   margin-bottom: 32px;
   gap: 4px;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
-.tab-btn {
+.tab-btn,
+.segmented-btn {
   border: none;
   background: transparent;
   padding: 8px 18px;
@@ -1081,9 +1085,16 @@ textarea.form-control {
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
-.tab-btn.active {
+.tab-btn:hover,
+.segmented-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active,
+.segmented-btn.active {
   background: #FFFFFF;
   color: var(--pss-navy-900);
   box-shadow: var(--shadow-sm);
