@@ -303,16 +303,22 @@ h4 { font-size: 1.2rem; font-weight: 600; }
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 76px;
-  background: rgba(255, 255, 255, 0.94);
+  height: 88px;
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-light);
-  transition: all var(--transition-base);
+  transition: height var(--transition-base), box-shadow var(--transition-base);
+}
+
+.site-header .container {
+  max-width: 1600px;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 .site-header.scrolled {
-  height: 70px;
+  height: 76px;
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
 }
 
@@ -320,46 +326,54 @@ h4 { font-size: 1.2rem; font-weight: 600; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 28px;
   height: 100%;
 }
 
 .brand-wrapper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .brand-logo-img {
-  height: 44px;
-  width: auto;
+  height: 58px !important;
+  width: auto !important;
   object-fit: contain;
+  display: block;
+  transition: height var(--transition-base);
+}
+
+.site-header.scrolled .brand-logo-img {
+  height: 48px !important;
 }
 
 .brand-title-group {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
+  justify-content: center;
 }
 
 .brand-title-name {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.12rem;
+  font-size: 1.28rem;
   letter-spacing: -0.02em;
   color: var(--pss-navy-900);
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .brand-title-sub {
-  font-size: 0.65rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--pss-blue-600);
   text-transform: uppercase;
   line-height: 1.2;
+  margin-top: 3px;
 }
 
 /* Desktop Navigation */
@@ -1241,7 +1255,7 @@ textarea.form-control {
 
 /* Client Logo Styling */
 .client-logo-wrapper {
-  height: 60px;
+  height: 66px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1251,10 +1265,16 @@ textarea.form-control {
 }
 
 .client-logo-img {
-  max-height: 44px;
-  max-width: 180px;
+  max-height: 48px;
+  max-width: 190px;
   width: auto;
   object-fit: contain;
   display: block;
+}
+
+.footer-brand img {
+  height: 44px !important;
+  width: auto !important;
+  object-fit: contain;
 }
 
