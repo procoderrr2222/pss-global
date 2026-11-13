@@ -281,6 +281,7 @@ p.lead {
 .brand-title-group {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
 }
 
 .brand-title-name {
@@ -290,6 +291,7 @@ p.lead {
   letter-spacing: -0.02em;
   color: var(--pss-navy-900);
   line-height: 1.15;
+  white-space: nowrap;
 }
 
 .brand-title-sub {
@@ -298,6 +300,8 @@ p.lead {
   letter-spacing: 0.08em;
   color: var(--pss-blue-600);
   text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 /* Desktop Navigation */
