@@ -1060,6 +1060,23 @@ textarea.form-control {
   resize: vertical;
 }
 
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.status-success {
+  background: #ecfdf5;
+  border: 1px solid #10b981;
+  color: #065f46;
+}
+
+.status-error {
+  background: #fef2f2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+}
+
 /* Segmented Tab Controls */
 .tab-controls,
 .segmented-control {

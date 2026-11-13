@@ -110,4 +110,96 @@
     el.textContent = currentYear;
   });
 
+  // 5. Client Enquiry Form Handler (Resend Integration)
+  const enquiryForm = document.getElementById("enquiry-form");
+  if (enquiryForm) {
+    enquiryForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const statusBox = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submit-btn");
+      const btnText = document.getElementById("btn-text");
+      const btnSpinner = document.getElementById("btn-spinner");
+
+      const nameVal = document.getElementById("name").value.trim();
+      const companyVal = document.getElementById("company").value.trim();
+      const emailVal = document.getElementById("email").value.trim();
+      const phoneVal = document.getElementById("phone").value.trim();
+      const serviceVal = document.getElementById("service").value;
+      const messageVal = document.getElementById("message").value.trim();
+
+      // Client-side quick check
+      if (!nameVal || !emailVal || !serviceVal || !messageVal) {
+        if (statusBox) {
+          statusBox.className = "status-error";
+          statusBox.style.display = "block";
+          statusBox.innerHTML = "<strong>Please fill in all required fields</strong> (Name, Work Email, Service Requirement, and Details).";
+        }
+        return;
+      }
+
+      // Button Loading State
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnSpinner) btnSpinner.style.display = "inline-block";
+      if (btnText) btnText.textContent = "Transmitting Enquiry...";
+      if (statusBox) statusBox.style.display = "none";
+
+      const payload = {
+        name: nameVal,
+        company: companyVal,
+        email: emailVal,
+        phone: phoneVal,
+        service: serviceVal,
+        message: messageVal
+      };
+
+      try {
+        const response = await fetch("send-enquiry.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          enquiryForm.reset();
+          if (statusBox) {
+            statusBox.className = "status-success";
+            statusBox.style.display = "block";
+            statusBox.innerHTML = `
+              <div style="display:flex; align-items:flex-start; gap:12px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong style="color:#065f46; font-size:0.98rem; display:block; margin-bottom:4px;">Enquiry Dispatched Successfully</strong>
+                  <p style="margin:0; font-size:0.9rem; color:#047857; line-height:1.5;">${result.message || "Thank you. Your requirement has been routed directly to our leadership team. We will review your scope and get in touch promptly."}</p>
+                </div>
+              </div>
+            `;
+          }
+          if (btnText) btnText.textContent = "Enquiry Submitted";
+          setTimeout(() => {
+            if (submitBtn) submitBtn.disabled = false;
+            if (btnText) btnText.textContent = "Submit Client Enquiry";
+            if (btnSpinner) btnSpinner.style.display = "none";
+          }, 4000);
+        } else {
+          throw new Error(result.error || "Failed to transmit enquiry. Please reach out via email directly.");
+        }
+      } catch (err) {
+        if (statusBox) {
+          statusBox.className = "status-error";
+          statusBox.style.display = "block";
+          statusBox.innerHTML = `<strong>Submission Error:</strong> ${err.message || "Unable to send enquiry. Please contact us directly at contact@pssglobal.co.in"}`;
+        }
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnSpinner) btnSpinner.style.display = "none";
+        if (btnText) btnText.textContent = "Submit Client Enquiry";
+      }
+    });
+  }
+
 })();
