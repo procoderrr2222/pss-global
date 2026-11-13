@@ -257,6 +257,7 @@ p.lead {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   height: 100%;
 }
 
@@ -265,6 +266,7 @@ p.lead {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
@@ -308,15 +310,17 @@ p.lead {
 .nav-desktop {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .nav-link {
   font-weight: 500;
-  font-size: 0.935rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 8px;
+  white-space: nowrap;
   transition: color 180ms ease, background-color 180ms ease;
   position: relative;
 }
@@ -411,6 +415,7 @@ p.lead {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 /* Apple-style Interactive Buttons with Immediate Feedback */
@@ -955,7 +960,7 @@ p.lead {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .nav-desktop, .header-actions {
     display: none;
   }
