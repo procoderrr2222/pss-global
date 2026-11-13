@@ -101,28 +101,26 @@
       </div>
     </section>
 
-    <!-- Interactive Contact Section -->
+    <!-- Corporate Contact Section -->
     <section class="section-py bg-subtle">
       <div class="container">
         <div class="grid-2" style="align-items:start;">
 
-          <!-- Left Column: Tabbed Forms -->
+          <!-- Left Column: Corporate Enquiry Form -->
           <div style="background:#FFF; padding:40px; border-radius:var(--radius-lg); border:1px solid var(--border-light); box-shadow:var(--shadow-md);">
-            
-            <div class="tab-controls" style="width:100%; display:grid; grid-template-columns:1fr 1fr; margin-bottom:28px;">
-              <button class="tab-btn active" id="tab-employer-btn" onclick="switchForm('employer')">Client Enquiry</button>
-              <button class="tab-btn" id="tab-candidate-btn" onclick="switchForm('candidate')">Candidate Submission</button>
-            </div>
+            <h3 style="margin-bottom:8px; font-size:1.4rem;">Send an Enquiry</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:28px;">
+              Please provide your organization details and requirements. Our consulting team will contact you promptly.
+            </p>
 
-            <!-- Form 1: Client Enquiry Form -->
-            <form id="employer-form" onsubmit="event.preventDefault(); alert('Thank you! Your enquiry has been received. Our team will contact you shortly.');">
+            <form id="enquiry-form" onsubmit="event.preventDefault(); alert('Thank you! Your enquiry has been received. Our team will contact you shortly.');">
               <div class="form-group">
                 <label class="form-label">Full Name *</label>
                 <input type="text" class="form-control" required placeholder="Enter your full name">
               </div>
               <div class="grid-2">
                 <div class="form-group">
-                  <label class="form-label">Email Address *</label>
+                  <label class="form-label">Work Email *</label>
                   <input type="email" class="form-control" required placeholder="name@company.com">
                 </div>
                 <div class="form-group">
@@ -154,60 +152,13 @@
               </div>
               <div class="form-group">
                 <label class="form-label">Message / Requirement Details *</label>
-                <textarea class="form-control" required placeholder="Please describe your organization, requirements, and preferred time for callback..."></textarea>
+                <textarea class="form-control" required rows="4" placeholder="Please describe your organization, requirements, and preferred time for callback..."></textarea>
               </div>
-              <button type="submit" class="btn btn-primary" style="width:100%; padding:13px;">Send Message</button>
-              <p style="font-size:0.75rem; color:var(--text-muted); margin-top:10px; text-align:center;">
+              <button type="submit" class="btn btn-primary" style="width:100%; padding:13px; font-size:0.95rem;">Send Message</button>
+              <p style="font-size:0.75rem; color:var(--text-muted); margin-top:12px; text-align:center;">
                 Submissions are sent directly to contact@pssglobal.co.in.
               </p>
             </form>
-
-            <!-- Form 2: Candidate Submission Form -->
-            <form id="candidate-form" style="display:none;" onsubmit="event.preventDefault(); alert('Thank you! Your profile has been received. Our recruitment desk will review your details.');">
-              <div class="form-group">
-                <label class="form-label">Full Name *</label>
-                <input type="text" class="form-control" required placeholder="Enter your full name">
-              </div>
-              <div class="grid-2">
-                <div class="form-group">
-                  <label class="form-label">Email Address *</label>
-                  <input type="email" class="form-control" required placeholder="your.email@example.com">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Phone Number *</label>
-                  <input type="tel" class="form-control" required placeholder="+91 98765 43210">
-                </div>
-              </div>
-              <div class="grid-2">
-                <div class="form-group">
-                  <label class="form-label">Role / Skill Set *</label>
-                  <input type="text" class="form-control" required placeholder="e.g. Java, Python, QA, Sales, Finance">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Total Experience *</label>
-                  <select class="form-control" required>
-                    <option value="">Select Experience...</option>
-                    <option value="0-2">0 - 2 Years</option>
-                    <option value="3-5">3 - 5 Years</option>
-                    <option value="6-10">6 - 10 Years</option>
-                    <option value="10+">10+ Years</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Profile / Portfolio Link *</label>
-                <input type="url" class="form-control" required placeholder="LinkedIn profile, Google Drive CV, or online portfolio URL">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Location & Availability</label>
-                <textarea class="form-control" placeholder="Current location, notice period, and preferred location..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-secondary" style="width:100%; padding:13px;">Submit Candidate Profile</button>
-              <p style="font-size:0.75rem; color:var(--text-muted); margin-top:10px; text-align:center;">
-                Your information is treated with strict confidentiality.
-              </p>
-            </form>
-
           </div>
 
           <!-- Right Column: Corporate Contact Information -->
@@ -348,29 +299,5 @@
   </footer>
 
   <script src="js/main.js?v=4.0"></script>
-  <script>
-    function switchForm(type) {
-      const empBtn = document.getElementById('tab-employer-btn');
-      const canBtn = document.getElementById('tab-candidate-btn');
-      const empForm = document.getElementById('employer-form');
-      const canForm = document.getElementById('candidate-form');
-
-      if (type === 'employer') {
-        empBtn.classList.add('active');
-        canBtn.classList.remove('active');
-        empForm.style.display = 'block';
-        canForm.style.display = 'none';
-      } else {
-        canBtn.classList.add('active');
-        empBtn.classList.remove('active');
-        canForm.style.display = 'block';
-        empForm.style.display = 'none';
-      }
-    }
-
-    if (window.location.hash === '#candidate-form') {
-      switchForm('candidate');
-    }
-  </script>
 </body>
 </html>
