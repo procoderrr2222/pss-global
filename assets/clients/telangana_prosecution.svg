@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <rect width="240" height="60" fill="none"/>
+  <g transform="translate(14, 8)">
+    <circle cx="22" cy="22" r="20" fill="none" stroke="#15803D" stroke-width="2"/>
+    <circle cx="22" cy="22" r="16" fill="#F0FDF4" stroke="#B45309" stroke-width="1"/>
+    <path d="M 12 28 C 12 16, 32 16, 32 28 Z" fill="#15803D"/>
+    <circle cx="22" cy="14" r="3" fill="#B45309"/>
+  </g>
+  <text x="64" y="26" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#15803D" letter-spacing="0.2">DIRECTOR OF PROSECUTION</text>
+  <text x="64" y="40" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="10" font-weight="700" fill="#B45309">TELANGANA GOVERNMENT</text>
+</svg>

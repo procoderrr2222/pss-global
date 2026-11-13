@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="200" height="60" fill="none"/>
+  <g transform="translate(16, 12)">
+    <circle cx="18" cy="18" r="15" fill="#0F172A"/>
+    <path d="M 12 24 L 18 10 L 24 24 L 18 20 Z" fill="#0D9488"/>
+  </g>
+  <text x="58" y="32" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#0F172A" letter-spacing="-0.5">accuro</text>
+  <text x="59" y="44" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#0D9488" letter-spacing="2">GROUP</text>
+</svg>

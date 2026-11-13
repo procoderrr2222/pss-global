@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 60" width="210" height="60">
+  <rect width="210" height="60" fill="none"/>
+  <g transform="translate(14, 12)">
+    <polygon points="6,6 26,2 34,26 14,30" fill="#1E3A8A"/>
+    <polygon points="2,14 18,10 24,34 8,38" fill="#DC2626" opacity="0.9"/>
+  </g>
+  <text x="58" y="29" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="17" font-weight="900" fill="#1E3A8A" letter-spacing="0.5">ALEX</text>
+  <text x="59" y="43" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="10" font-weight="700" fill="#DC2626" letter-spacing="2">PANELS</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 60" width="230" height="60">
+  <rect width="230" height="60" fill="none"/>
+  <g transform="translate(14, 12)">
+    <!-- Cross -->
+    <path d="M 8 2 L 14 2 L 14 8 L 20 8 L 20 14 L 14 14 L 14 20 L 8 20 L 8 14 L 2 14 L 2 8 L 8 8 Z" fill="#005596"/>
+    <!-- Shield -->
+    <path d="M 24 6 C 24 6, 32 4, 34 6 C 36 14, 34 24, 24 28 C 14 24, 12 14, 14 6 C 16 4, 24 6, 24 6 Z" fill="#002F6C" transform="translate(12, 0)"/>
+    <path d="M 36 10 L 36 22" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+  <text x="68" y="27" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#005596">BlueCross</text>
+  <text x="68" y="42" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#002F6C">BlueShield</text>
+</svg>

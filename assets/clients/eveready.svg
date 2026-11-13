@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 60" width="210" height="60">
+  <rect width="210" height="60" fill="none"/>
+  <g transform="translate(12, 12)">
+    <ellipse cx="44" cy="18" rx="40" ry="17" fill="#DC2626"/>
+    <text x="44" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle" font-style="italic" letter-spacing="0.5">EVEREADY</text>
+    <circle cx="10" cy="18" r="4" fill="#000000"/>
+    <text x="10" y="21" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="6" font-weight="900" fill="#FFFFFF" text-anchor="middle">9</text>
+  </g>
+  <text x="102" y="36" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#18181B">INDUSTRIES</text>
+</svg>

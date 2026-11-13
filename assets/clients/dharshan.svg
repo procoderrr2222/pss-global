@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 60" width="210" height="60">
+  <rect width="210" height="60" fill="none"/>
+  <g transform="translate(15, 12)">
+    <path d="M 16 4 C 10 14, 6 22, 16 32 C 26 22, 22 14, 16 4 Z" fill="#D97706"/>
+    <path d="M 16 4 L 16 32" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="8" cy="18" r="3" fill="#15803D"/>
+    <circle cx="24" cy="18" r="3" fill="#15803D"/>
+  </g>
+  <text x="54" y="29" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#1E293B">DHARSHAN</text>
+  <text x="55" y="43" font-family="'Plus Jakarta Sans', Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#D97706" letter-spacing="2">FOODS</text>
+</svg>

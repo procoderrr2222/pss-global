@@ -103,34 +103,7 @@
     });
   });
 
-  // 4. Contact Form Validation and Submission Handling
-  const contactForms = document.querySelectorAll("form[data-ajax-form]");
-  contactForms.forEach(function (form) {
-    form.addEventListener("submit", function (e) {
-      const submitBtn = form.querySelector("button[type=submit]");
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = `
-          <svg style="animation: spin 1s linear infinite; display: inline-block; vertical-align: middle; margin-right: 8px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
-            <path d="M12 2a10 10 0 0 1 10 10"></path>
-          </svg>
-          Transmitting Enquiry...
-        `;
-
-        // Subtle animation keyframe injection if not present
-        if (!document.getElementById("spin-style")) {
-          const style = document.createElement("style");
-          style.id = "spin-style";
-          style.textContent = "@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }";
-          document.head.appendChild(style);
-        }
-      }
-    });
-  });
-
-  // 5. Automatic Dynamic Year
+  // 4. Automatic Dynamic Year
   const yearEls = document.querySelectorAll(".current-year");
   const currentYear = new Date().getFullYear();
   yearEls.forEach(function (el) {
