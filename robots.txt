@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.pssglobal.co.in/sitemap.xml
+Sitemap: https://pssglobal.co.in/sitemap.xml
