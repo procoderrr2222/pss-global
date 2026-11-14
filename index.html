@@ -61,11 +61,12 @@
 
       <!-- Header CTAs -->
       <div class="header-actions">
-        <a href="tel:+919885333117" class="header-phone">
+        <a href="tel:+919348134268" class="header-phone">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +91 98853 33117
+          +91 93481 34268
         </a>
-        <a href="contact.html" class="btn btn-primary" style="padding: 7px 16px; font-size: 0.84rem;">Contact Us</a>
+        <button type="button" class="btn btn-tinted btn-pill" data-open-modal="signup-modal" style="padding: 7px 16px; font-size: 0.84rem;">Sign Up</button>
+        <a href="contact.html" class="btn btn-primary btn-pill" style="padding: 7px 16px; font-size: 0.84rem;">Contact Us</a>
       </div>
 
       <!-- Mobile Hamburger Button -->
@@ -89,8 +90,9 @@
     <a href="clients.html" class="mobile-nav-link">Clients</a>
     <a href="about.html" class="mobile-nav-link">About Us</a>
     <a href="contact.html" class="mobile-nav-link">Contact</a>
-    <div style="margin-top: 24px; padding: 0 16px;">
-      <a href="tel:+919885333117" class="btn btn-outline" style="width: 100%;">Call +91 98853 33117</a>
+    <div style="margin-top: 24px; padding: 0 16px; display: flex; flex-direction: column; gap: 10px;">
+      <button type="button" class="btn btn-primary btn-pill" data-open-modal="signup-modal" style="width: 100%;">Sign Up Now</button>
+      <a href="tel:+919348134268" class="btn btn-outline btn-pill" style="width: 100%;">Call +91 93481 34268</a>
     </div>
   </aside>
 
@@ -113,11 +115,11 @@
               Praneeth Soft Solutions (PSS) provides staffing, payroll and business solutions tailored to organizational requirements. Every organization is unique &mdash; so we design solutions around your work culture and human-resource structure rather than using a fixed template.
             </p>
             <div class="hero-actions">
-              <a href="contact.html" class="btn btn-primary" style="padding: 13px 26px; font-size: 0.95rem;">
-                Contact PSS
+              <button type="button" class="btn btn-primary btn-pill" data-open-modal="signup-modal" style="padding: 13px 26px; font-size: 0.95rem;">
+                Get Started
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-              <a href="services.html" class="btn btn-outline-dark" style="padding: 13px 24px; font-size: 0.95rem;">
+              </button>
+              <a href="services.html" class="btn btn-outline-dark btn-pill" style="padding: 13px 24px; font-size: 0.95rem;">
                 Explore All Services
               </a>
             </div>
@@ -303,8 +305,8 @@
           Contact our consulting team to discuss customized staffing, payroll, or business solutions for your organization.
         </p>
         <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-          <a href="contact.html" class="btn btn-primary" style="padding: 12px 28px;">Contact Us</a>
-          <a href="tel:+919885333117" class="btn btn-outline" style="padding: 12px 24px;">Call +91 98853 33117</a>
+          <button type="button" class="btn btn-primary btn-pill" data-open-modal="signup-modal" style="padding: 12px 28px;">Sign Up for Consultation</button>
+          <a href="tel:+919348134268" class="btn btn-outline btn-pill" style="padding: 12px 24px;">Call +91 93481 34268</a>
         </div>
       </div>
     </section>
@@ -346,7 +348,7 @@
         <div>
           <h4 class="footer-col-title">Contact</h4>
           <ul class="footer-links">
-            <li><a href="tel:+919885333117">+91 98853 33117</a></li>
+            <li><a href="tel:+919348134268">+91 93481 34268</a></li>
             <li><a href="mailto:contact@pssglobal.co.in">contact@pssglobal.co.in</a></li>
             <li><a href="https://pssglobal.co.in/">pssglobal.co.in</a></li>
           </ul>
@@ -362,6 +364,108 @@
       </div>
     </div>
   </footer>
+
+  <!-- iOS Signup Modal & Sheet (Apple Design System) -->
+  <div id="signup-modal-scrim" class="ios-modal-scrim" aria-hidden="true"></div>
+
+  <div id="signup-modal-sheet" class="ios-modal-sheet" role="dialog" aria-modal="true" aria-labelledby="ios-modal-title">
+    <!-- iOS Pull-to-Dismiss Grabber for Mobile Sheet -->
+    <div class="ios-sheet-grabber-area" aria-hidden="true">
+      <div class="ios-sheet-grabber"></div>
+    </div>
+
+    <!-- Modal Header -->
+    <div class="ios-modal-header">
+      <div>
+        <span class="ios-modal-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          Quick Onboarding
+        </span>
+        <h2 id="ios-modal-title" class="ios-modal-title">Get Started with PSS</h2>
+        <p class="ios-modal-subtitle">Create your account for staffing, payroll &amp; enterprise solutions</p>
+      </div>
+      <button type="button" class="btn-close-ios" id="signup-modal-close" aria-label="Close dialog">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div id="ios-modal-body-content">
+      <!-- Apple Segmented Control -->
+      <div class="ios-segmented-control" role="tablist" aria-label="Account Type">
+        <button type="button" class="ios-segment-btn active" role="tab" aria-selected="true" data-role="employer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Employer / Client
+        </button>
+        <button type="button" class="ios-segment-btn" role="tab" aria-selected="false" data-role="candidate">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Candidate / Talent
+        </button>
+      </div>
+
+      <!-- Quick Social Auth Stack -->
+      <div class="ios-social-stack">
+        <button type="button" class="ios-social-btn btn-apple">
+          <svg width="16" height="16" viewBox="0 0 170 170" fill="currentColor">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.56-7.71-11.61-14.01-6.19-9.69-10.9-20.65-14.14-32.88-3.23-12.22-4.85-23.71-4.85-34.46 0-14.35 3.52-26.31 10.56-35.88 7.03-9.57 16.03-14.47 26.98-14.7 4.9.11 10.15 1.34 15.75 3.69 5.6 2.35 9.38 3.59 11.35 3.71 1.74-.23 5.64-1.52 11.71-3.87 6.07-2.35 11.45-3.41 16.14-3.18 12.18.9 22.06 5.43 29.63 13.59-10.68 6.42-15.91 15.53-15.7 27.34.22 9.24 3.77 17.06 10.66 23.47 6.89 6.42 15.17 10.15 24.84 11.21-2.28 7.18-5.18 14.5-8.7 21.96zM119.22 33.64c-.11-7.07 2.45-13.79 7.68-20.15 5.23-6.36 11.77-10.53 19.63-12.51.22 1.3.33 2.5.33 3.59 0 6.96-2.61 13.68-7.83 20.16-5.22 6.48-11.83 10.54-19.81 12.18v-3.27z"/>
+          </svg>
+          Continue with Apple
+        </button>
+
+        <button type="button" class="ios-social-btn btn-google">
+          <svg width="16" height="16" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          Continue with Google
+        </button>
+      </div>
+
+      <!-- Hairline divider -->
+      <div class="ios-divider">
+        <span>or sign up with email</span>
+      </div>
+
+      <!-- Inset Grouped Table Form -->
+      <form id="ios-signup-form" novalidate>
+        <input type="hidden" id="ios-signup-role" name="role" value="employer">
+
+        <div class="ios-grouped-card">
+          <div class="ios-field-row">
+            <label class="ios-field-label" for="ios-signup-name">Full Name</label>
+            <input type="text" id="ios-signup-name" name="name" class="ios-input" placeholder="e.g. Srikant Sharma" required autocomplete="name">
+          </div>
+
+          <div class="ios-field-row" id="ios-field-company-row">
+            <label class="ios-field-label" for="ios-signup-company">Company / Organization</label>
+            <input type="text" id="ios-signup-company" name="company" class="ios-input" placeholder="e.g. Persistent Systems" autocomplete="organization">
+          </div>
+
+          <div class="ios-field-row">
+            <label class="ios-field-label" id="ios-label-role" for="ios-signup-email">Work Email</label>
+            <input type="email" id="ios-signup-email" name="email" class="ios-input" placeholder="name@company.com" required autocomplete="email">
+          </div>
+
+          <div class="ios-field-row">
+            <label class="ios-field-label" for="ios-signup-phone">Phone Number</label>
+            <input type="tel" id="ios-signup-phone" name="phone" class="ios-input" placeholder="+91 93481 34268" autocomplete="tel">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-pill btn-ios-submit">
+          <span>Create Account</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="ios-modal-footer">
+          <p class="ios-modal-terms">
+            By proceeding, you agree to PSS Global's <a href="about.html">Terms of Service</a> and <a href="about.html">Privacy Policy</a>.
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="js/main.js?v=5.0"></script>
 </body>
